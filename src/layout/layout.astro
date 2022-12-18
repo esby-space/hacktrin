@@ -1,0 +1,34 @@
+---
+const { title } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="./tiger.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <title>{title}</title>
+    </head>
+    <body class="text-xl">
+        <slot></slot>
+        <footer class="p-8 bg-gray-200 text-center">
+            <div>
+                <h3 class="text-2xl font-bold leading-loose">HackTrin</h3>
+                <p>Trinity School</p>
+                <p>115 W 91st Street</p>
+                <p>New York, NY 10024</p>
+            </div>
+
+            <div class="text-gray-500">
+                <p>© 2023 HackTrin / Trinity Episcopal School Corp.</p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

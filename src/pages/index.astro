@@ -1,0 +1,163 @@
+---
+import Layout from "../layout/layout.astro";
+import Countdown from "../components/countdown.astro";
+import Portrait from "../components/portrait.astro";
+import Instagram from "../components/instagram.astro";
+---
+
+<Layout title="HackTrin X">
+    <header class="bg-primary h-screen grid place-content-center gap-y-14 text-center text-white">
+        <div class="p-16 bg-secondary text-primary border-8 border-primary shadow-[32px_32px_white]">
+            <h1 class="text-7xl font-pixel">HACKTRIN X</h1>
+            <h2 class="text-3xl font-pixel">Trinity School's Annual Hackathon</h2>
+        </div>
+        <div>
+            <h3 class="text-3xl leading-relaxed">January 29th, 2023</h3>
+            <h3 class="text-3xl leading-relaxed">9:00am - 5:00pm</h3>
+        </div>
+
+        <Countdown />
+
+        <div class="text-3xl font-pixel z-10">
+            <a
+                class="p-4 text-primary bg-secondary hover:shadow-[16px_16px_white] transition-all"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdgl1qzC0CHfPzJXIbExHoSUcAT7vp3MpZFkTOdT0R-ZQ_MVg/viewform?usp=sf_link"
+                >Sign up!</a
+            >
+        </div>
+
+        <div class="text-2xl z-10">
+            <a href="#about">More info</a>
+        </div>
+
+        <img src="./tiger.png" class="absolute bottom-0 right-4 w-2/5 max-w-xl z-0">
+    </header>
+
+    <main class="p-8 max-w-4xl m-auto">
+        <section id="about" class="my-16">
+            <h2 class="text-3xl font-pixel text-center leading-loose">About HackTrin</h2>
+            <p>
+                HackTrin X is the tenth iteration of Trinity School's annual hackathon. Middle and high schoolers, of
+                any experience level, can participate. You can form teams of 1-4 students, even across different
+                schools, and work to make projects relating to coding. We'll have workshops and mentors to help you with
+                your projects and learn! The theme will be announced shortly before the event. Participants may start
+                planning their project ahead of the event date (but not coding or building). Coding and building starts
+                on January 29th. You'll present your projects to our panels of judges to win prizes in multiple
+                categories (including a beginner category)!
+            </p>
+        </section>
+
+        <section id="faq" class="my-16">
+            <h2 class="text-3xl font-pixel text-center leading-loose">FAQ</h2>
+
+            <h3 class="font-bold text-2xl leading-loose">What is a hackathon?</h3>
+            <p class="mb-4">
+                A hackathon is an event where teams get together and build a project relating to coding, using software
+                or hardware components, in a short period of time.
+            </p>
+
+            <h3 class="font-bold text-2xl leading-loose">What types of projects are allowed at HackTrin?</h3>
+            <p class="mb-4">
+                Anything you want, as long as it involves some coding component and relates to the theme. Popular
+                projects in the past have included websites, apps, games, gagdets, or whatever else you
+            </p>
+
+            <h3 class="font-bold text-2xl leading-loose">Is there a theme at HackTrin?</h3>
+            <p class="mb-4">The theme will be announced shortly before the event.</p>
+
+            <h3 class="font-bold text-2xl leading-loose">Who can come to HackTrin?</h3>
+            <p class="mb-4">HackTrin is open to any current high school or middle school student.</p>
+        </section>
+
+        <section id="faq" class="text-center my-16">
+            <h2 class="text-3xl font-pixel text-center leading-loose">Awards</h2>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold text-2xl leading-loose">Best Middle School</h3>
+                    <p class="mb-4">The middle school project that stands out overall.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-2xl leading-loose">Best Design</h3>
+                    <p class="mb-4">The project that has the best construction and implementation.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-2xl leading-loose">Best Overall</h3>
+                    <p class="mb-4">The project that excels in every category</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-2xl leading-loose">Best Use of Theme</h3>
+                    <p class="mb-4">The project that creatively and effectively uses the theme.</p>
+                </div>
+
+                <div class="col-span-2 w-1/2 m-auto">
+                    <h3 class="font-bold text-2xl leading-loose">Judge's Choice</h3>
+                    <p class="mb-4">
+                        The project that the judges think is especially inventive, holds a lot of promise, or stands out
+                        in ways different from the other categories.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="my-16 text-center">
+            <h2 class="text-3xl font-pixel text-center leading-loose">Contact Us</h2>
+            <h3>
+                Have questions, comments, or concerns? Just want to get more emails? If so, just fill out this form
+                below!
+            </h3>
+
+            <div class="mt-8 text-3xl font-pixel">
+                <a
+                    class="text-2xl font-pixel p-4 bg-primary text-white hover:bg-blue-700 hover:shadow-xl transition-all"
+                    href="mailto:patience.gifford23@trinityschoolnyc.org">Contact!</a
+                >
+            </div>
+        </section>
+
+        <section id="leadership" class="my-16">
+            <h2 class="text-3xl font-pixel text-center leading-loose">HackTrin X Leadership</h2>
+
+            <Portrait image="./Lake-Gifford.png" name="Lake Gifford '23" role="President" />
+            <div class="flex gap-4 justify-between">
+                <Portrait image="./Becca-Jekogian.jpg" name="Becca Jekogian '23" role="Outreach" />
+                <Portrait image="./Nathaniel-Shalam.jpg" name="Nathaniel Shalam '25" role="Publicitiy" />
+                <Portrait image="./Nancy-Chen.jpg" name="Nancy Chen '23 " role="Art and Design" />
+                <Portrait image="./Ian-Kopke.jpg" name="Ian Kopke '23 " role="Workshops" />
+            </div>
+        </section>
+
+        <section id="mentors" class="my-16">
+            <h2 class="text-3xl font-pixel text-center leading-loose">Mentors</h2>
+            <p>
+                Do you have experience with coding or engineering and want to help students with their projects? If so,
+                sign up to be a mentor!
+            </p>
+        </section>
+
+        <section id="social" class="my-16 text-center grid place-items-center">
+            <h2 class="text-3xl font-pixel text-center leading-loose">Follow Us!</h2>
+            <Instagram />
+        </section>
+
+        <section id="events" class="my-16 text-center">
+            <h2 class="text-3xl font-pixel text-center leading-loose">Other Local Events</h2>
+            <p>Here are other great events in the NYC area:</p>
+
+            <div class="grid grid-cols-2 items-center justify-items-center my-8">
+                <a href="http://blogs.dalton.org/bitbybit/"><img src="./Bit-By-Bit.jpg" /></a>
+                <a
+                    href="https://www.cs.cornell.edu/information/news/newsitem11597/cornell-university-high-school-programming-contest-spring-2021"
+                    ><img src="./Cornell.png" />
+                </a>
+                <a href="https://www.stuyhacks.org"><img src="./StuyHacks.png" /></a>
+                <a href="https://www.spencehacks.com" class="h-full aspect-square"
+                    ><img src="./SpenceHacks.png" class="h-full object-cover" />
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>
